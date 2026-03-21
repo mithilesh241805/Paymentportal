@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MK Payment Portal - Secure UPI Gateway</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cyber-bg"></div>
+    <div class="glitch-overlay"></div>
+
+    <div class="container">
+        <div class="payment-portal">
+            <div class="header">
+                <div class="mk-logo-container">
+                    <div class="mk-logo">
+                        <div class="orbit orbit-1">
+                            <div class="orbit-dot"></div>
+                        </div>
+                        <div class="orbit orbit-2">
+                            <div class="orbit-dot"></div>
+                        </div>
+                        <div class="mk-text">MK</div>
+                    </div>
+                </div>
+                <div class="title">MK Payment Portal</div>
+                <div class="subtitle">Encrypted Transaction Protocol</div>
+                <div style="margin-top: 20px;">
+                    <div class="terminal-line">System Status: ONLINE</div>
+                    <div class="terminal-line">Security Level: MAXIMUM</div>
+                    <div class="terminal-line">Encryption: ACTIVE</div>
+                    <div class="terminal-line" style="color: #ff00ff;">Contact: mrmk1624@hi2.in</div>
+                </div>
+            </div>
+
+            <div class="payment-grid">
+                <!-- Union Bank Card -->
+                <div class="payment-card">
+                    <div class="bank-header">
+                        <div class="bank-icon">UB</div>
+                        <div class="bank-name">Union Bank</div>
+                    </div>
+                    
+                    <div class="amount-input-section">
+                        <div class="input-label">Enter Amount (₹)</div>
+                        <input type="number" id="amount-union" class="amount-input" placeholder="0.00" min="1" step="0.01">
+                    </div>
+
+                    <div style="text-align: center;">
+                        <div class="qr-container">
+                            <div id="qr-union"></div>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-copy" onclick="copyUPI('8940091624@naviaxis', this)">
+                            <span>📋 COPY UPI</span>
+                        </button>
+                        <button class="btn" onclick="downloadQR('qr-union', 'Union_Bank_QR.png')">
+                            <span>💾 SAVE QR</span>
+                        </button>
+                        <button class="btn btn-primary" onclick="initiatePayment('8940091624@naviaxis', 'Union Bank of India', 'amount-union')">
+                            <span>📱 PAY NOW</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- State Bank Card -->
+                <div class="payment-card">
+                    <div class="bank-header">
+                        <div class="bank-icon">SBI</div>
+                        <div class="bank-name">State Bank</div>
+                    </div>
+                    
+                    <div class="amount-input-section">
+                        <div class="input-label">Enter Amount (₹)</div>
+                        <input type="number" id="amount-sbi" class="amount-input" placeholder="0.00" min="1" step="0.01">
+                    </div>
+
+                    <div style="text-align: center;">
+                        <div class="qr-container">
+                            <div id="qr-sbi"></div>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-copy" onclick="copyUPI('8940091624-1@naviaxis', this)">
+                            <span>📋 COPY UPI</span>
+                        </button>
+                        <button class="btn" onclick="downloadQR('qr-sbi', 'State_Bank_QR.png')">
+                            <span>💾 SAVE QR</span>
+                        </button>
+                        <button class="btn btn-primary" onclick="initiatePayment('8940091624-1@naviaxis', 'State Bank of India', 'amount-sbi')">
+                            <span>📱 PAY NOW</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-info">
+                <div style="background: rgba(0, 204, 255, 0.1); border: 1px solid #00ccff; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+                    <div style="color: #00ccff; font-size: 14px; margin-bottom: 10px; text-align: center;">
+                        📱 <strong>AFTER PAYMENT - SEND RECEIPT</strong>
+                    </div>
+                    <div style="color: #00ff41; font-size: 12px; text-align: center; line-height: 1.6; margin-bottom: 15px;">
+                        WhatsApp Number:<br>
+                        <span style="color: #00ccff; font-size: 18px; letter-spacing: 2px;">
+                            +91 894<span class="masked-digits">XXXXX</span>
+                        </span><br>
+                        <span style="opacity: 0.7;">(Auto-opens after payment)</span>
+                    </div>
+                    <div style="color: #00ff41; font-size: 12px; text-align: center; line-height: 1.6; margin-bottom: 15px;">
+                        📧 Email:<br>
+                        <span style="color: #ff00ff; font-size: 14px; letter-spacing: 1px;">
+                            mrmk1624@hi2.in
+                        </span>
+                    </div>
+                    <div style="text-align: center;">
+                        <button class="btn btn-primary" onclick="sendGreeting()" style="display: inline-block; max-width: 250px;">
+                            <span>💬 SEND RECEIPT NOW</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="status-bar">
+                    <div class="status-item">
+                        <div class="status-dot"></div>
+                        <span>SECURE CONNECTION</span>
+                    </div>
+                    <div class="status-item">
+                        <div class="status-dot"></div>
+                        <span>256-BIT ENCRYPTION</span>
+                    </div>
+                    <div class="status-item">
+                        <div class="status-dot"></div>
+                        <span>INSTANT TRANSFER</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <!-- Main JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
