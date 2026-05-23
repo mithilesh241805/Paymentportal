@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // State Bank QR
     new QRCode(document.getElementById("qr-sbi"), {
-        text: "upi://pay?pa=8940091624-1@naviaxis&pn=State Bank of India&cu=INR",
+        text: "upi://pay?pa=16240406@sbi&pn=State Bank of India&cu=INR",
         width: 180,
         height: 180,
         colorDark: "#000000",
@@ -109,7 +109,7 @@ function sendGreeting() {
     const message = encodeURIComponent(`Hi😺😉`);
     
     // Open WhatsApp with greeting
-    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
+    window.open(`https://wa.me/${whatsappNumber}?text=${HI😉😸}`, '_blank');
 }
 
 // Virus Blast Touch Effect
