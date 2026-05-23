@@ -109,7 +109,7 @@ function sendGreeting() {
     const message = encodeURIComponent(`Hi😺😉`);
     
     // Open WhatsApp with greeting
-    window.open(`https://wa.me/${whatsappNumber}?text=${HI😉😸}`, '_blank');
+    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
 }
 
 // Virus Blast Touch Effect
